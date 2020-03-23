@@ -299,6 +299,9 @@ right.onclick = function() {
       right.style.color = "blue";
       break;
     case (right.style.color = "blue"):
+      right.style.color = "black";
+      break;
+    case (right.style.color = "black"):
       right.style.color = "white";
       break;
   }
