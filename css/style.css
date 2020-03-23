@@ -1,0 +1,427 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Conv_ofont.ru_Segoe WP";
+  src: url("../fonts/ofont.ru_Segoe WP.eot");
+  src: local("☺"), url("../fonts/ofont.ru_Segoe WP.woff") format("woff"), url("../fonts/ofont.ru_Segoe WP.ttf") format("truetype"), url("../fonts/ofont.ru_Segoe WP.svg") format("svg");
+}
+
+@font-face {
+  font-family: "Lato Regular";
+  src: url("../fonts/lato_regular.eot");
+  /* IE 9 Compatibility Mode */
+  src: url("../fonts/lato_regular.eot?#iefix") format("embedded-opentype"), url("../fonts/lato_regular.woff2") format("woff2"), url("../fonts/lato_regular.woff") format("woff"), url("../fonts/lato_regular.ttf") format("truetype"), url("../fonts/lato_regular.svg#lato_regular") format("svg");
+  /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+  font-family: "Conv_Mrs-Eaves-OT-Italic_31442";
+  src: url("../fonts/Mrs-Eaves-OT-Italic_31442.eot");
+  src: local("☺"), url("../fonts/Mrs-Eaves-OT-Italic_31442.woff") format("woff"), url("../fonts/Mrs-Eaves-OT-Italic_31442.ttf") format("truetype"), url("../fonts/Mrs-Eaves-OT-Italic_31442.svg") format("svg");
+}
+
+body {
+  font-family: "Lato Regular";
+  background-color: #dadee2;
+}
+
+.container {
+  max-width: 996px;
+  margin: 0px auto;
+}
+
+.hide {
+  display: none;
+}
+
+.window {
+  width: 100%;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+header {
+  background-color: #ececec;
+  background: url(/img/Det-sjunde-inseglet-1957.jpeg) no-repeat;
+  background-size: 100% 100%;
+}
+
+.header-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .header-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.header-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 992px) {
+  .header-logo {
+    margin: 0px auto 20px;
+  }
+}
+
+.header-logo-img {
+  position: relative;
+}
+
+.header-logo-img img {
+  display: block;
+  max-width: 100%;
+}
+
+.header-logo-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-size: 22px;
+  padding-top: 10px;
+  padding-left: 12px;
+  color: #fff;
+}
+
+.header-logo-text p {
+  font-size: 15px;
+  padding-top: 21px;
+  padding-left: 30px;
+  color: #8acc6e;
+  font-weight: 700;
+  z-index: 3;
+}
+
+.header-logo-cinema {
+  font-size: 22px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 992px) {
+  .header-input {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+.header-input form {
+  border: 5px solid #8acc6e;
+  background-color: #8acc6e;
+}
+
+.header-input form input {
+  font-size: 23px;
+}
+
+.header-input form button {
+  margin-left: 10px;
+  background: url(/img/header-sear.png) left no-repeat;
+  font-size: 23px;
+  padding: 10px 10px 10px 30px;
+  background-color: #8acc6e;
+  color: #fff;
+}
+
+.header-cart-cart button {
+  font-size: 23px;
+  font-family: "Conv_ofont.ru_Segoe WP";
+  background: url(/img/header_cart.png) left no-repeat;
+  padding-left: 40px;
+  padding-right: 10px;
+}
+
+.header-cart-cart button:hover {
+  border: 3px solid #8acc6e;
+}
+
+.header-cart-cart span {
+  padding-left: 10px;
+}
+
+.header-cart-cost {
+  padding-top: 20px;
+}
+
+.header-cart-cost button {
+  margin-left: 10px;
+  font-family: "Conv_Mrs-Eaves-OT-Italic_31442";
+  font-size: 25px;
+  line-height: 26px;
+  background-color: #414141;
+  color: #fff;
+  padding: 7px 12px 7px 7px;
+  position: relative;
+}
+
+.header-cart-cost button:hover {
+  bottom: 1px;
+  border: 2px solid #8acc6e;
+  color: #8acc6e;
+}
+
+.content-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+
+.main-sidebar {
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
+}
+
+.main-tabs {
+  -webkit-box-flex: 80%;
+      -ms-flex: 80%;
+          flex: 80%;
+}
+
+.tabs-nav {
+  border: 1px solid gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tabs-item {
+  -webkit-box-flex: 25%;
+      -ms-flex: 25%;
+          flex: 25%;
+  text-align: center;
+  background-color: #dadee2;
+}
+
+.tabs-item a {
+  color: #6b6969;
+  font-size: 20px;
+  display: block;
+  padding: 10px 0px 10px 0px;
+}
+
+.tabs-block {
+  display: none;
+}
+
+.tabs-block:target {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.film {
+  border: 1px solid gray;
+  width: 25%;
+  height: 280px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+  color: #464646;
+  position: relative;
+}
+
+.film-img img {
+  width: 70%;
+  margin: 5px auto 0;
+  display: block;
+}
+
+.film-name {
+  padding-top: 3px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.film-cost {
+  font-family: "Conv_Mrs-Eaves-OT-Italic_31442";
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.newfilms {
+  position: relative;
+}
+
+.newfilms:before {
+  content: "new";
+  background-color: #9087de;
+  position: absolute;
+  color: #fff;
+  border-radius: 100%;
+  padding: 10px;
+  width: 30%;
+  height: 15%;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  font-family: "Conv_Mrs-Eaves-OT-Italic_31442";
+  text-transform: uppercase;
+}
+
+.popular {
+  position: relative;
+}
+
+.popular:before {
+  content: "pop";
+  background-color: #e6d816;
+  position: absolute;
+  color: tomato;
+  border-radius: 100%;
+  text-align: center;
+  padding-top: 10px;
+  width: 30%;
+  height: 15%;
+  top: 0;
+  left: 0;
+  font-size: 22px;
+  font-family: "Conv_Mrs-Eaves-OT-Italic_31442";
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.stocks {
+  position: relative;
+}
+
+.stocks:after {
+  content: "-50%";
+  background-color: #e24d11;
+  position: absolute;
+  color: black;
+  opacity: 0.8;
+  text-align: center;
+  width: 80%;
+  height: 10%;
+  top: 50%;
+  right: 0;
+  font-size: 22px;
+  font-family: "Conv_Mrs-Eaves-OT-Italic_31442";
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.tabs-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: cadetblue;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  width: 400px;
+  height: 620px;
+  background: #aebcbf;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(18%, #aebcbf), color-stop(44%, #6e7774), color-stop(81%, #0a0e0a), to(#0a0809));
+  background: linear-gradient(to bottom, #aebcbf 18%, #6e7774 44%, #0a0e0a 81%, #0a0809 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aebcbf', endColorstr='#0a0809',GradientType=0 );
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-wrap {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  text-align: center;
+  font-size: 20px;
+}
+
+.modal-buy {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.modal-buy .modal-left {
+  position: absolute;
+  color: #fff;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.modal-buy .modal-right {
+  position: absolute;
+  color: #fff;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.modal-buy a img {
+  padding: 15px;
+  background-color: #dadee2;
+  border: 3px solid #dadee2;
+  border-radius: 100%;
+  block-size: 120%;
+  float: right;
+  display: block;
+}
+
+.modal-buy a img:hover {
+  border: 2px solid #8acc6e;
+}
+
+.modal-close {
+  width: 70px;
+  font-size: 18px;
+  background-color: darkgoldenrod;
+  font-family: "Conv_ofont.ru_Segoe WP";
+  margin-bottom: 10px;
+  padding-bottom: 3px;
+  border-radius: 70%;
+  margin: 0px auto;
+}
+
+.modal-close:hover {
+  border: 3px solid black;
+}
+
+.btnItem-onclick {
+  border: 2px solid black;
+  background: linear-gradient(135deg, #0d1c21 13%, #1e3027 21%, rgba(82, 109, 57, 0.38) 45%, rgba(132, 167, 74, 0.15) 68%, rgba(180, 223, 91, 0.73) 90%, #b4df5b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d1c21', endColorstr='#b4df5b',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d1c21', endColorstr='#b4df5b',GradientType=1 );
+  font-weight: 700;
+}

@@ -1,0 +1,122 @@
+header {
+  background-color: #ececec;
+  background: url(/img/Det-sjunde-inseglet-1957.jpeg) no-repeat;
+  background-size: 100% 100%;
+}
+
+.header-content {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  color: #fff;
+  @media (max-width: 992px) {
+    flex-direction: column;
+  }
+}
+.header-logo {
+  display: flex;
+  @media (max-width: 992px) {
+    margin: 0px auto 20px;
+  }
+}
+.header-logo-img {
+  position: relative;
+  & img {
+    display: block;
+    max-width: 100%;
+  }
+}
+.header-logo-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-size: 22px;
+  padding-top: 10px;
+  padding-left: 12px;
+  color: #fff;
+
+  & p {
+    font-size: 15px;
+    padding-top: 21px;
+    padding-left: 30px;
+    color: #8acc6e;
+    font-weight: 700;
+    z-index: 3;
+  }
+}
+.header-logo-cinema {
+  font-size: 22px;
+  transform: rotate(-90deg);
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+.header-input {
+  @media (max-width: 992px) {
+    order: 3;
+  }
+  & form {
+    border: 5px solid #8acc6e;
+    background-color: #8acc6e;
+  }
+  & form input {
+    font-size: 23px;
+  }
+  & form button {
+    margin-left: 10px;
+    background: url(/img/header-sear.png) left no-repeat;
+    font-size: 23px;
+    padding: 10px 10px 10px 30px;
+    background-color: #8acc6e;
+    color: #fff;
+  }
+}
+
+.search-input {
+}
+
+.search-button {
+}
+
+.header-cart {
+  @media (max-width: 992px) {
+  }
+}
+.header-cart-cart {
+  & button {
+    font-size: 23px;
+    font-family: $segoe;
+    background: url(/img/header_cart.png) left no-repeat;
+    padding-left: 40px;
+    padding-right: 10px;
+    &:hover {
+      border: 3px solid #8acc6e;
+    }
+  }
+
+  & span {
+    padding-left: 10px;
+  }
+}
+.header-cart-cost {
+  padding-top: 20px;
+
+  & span {
+  }
+  & button {
+    margin-left: 10px;
+    font-family: $eaves;
+    font-size: 25px;
+    line-height: 26px;
+    background-color: #414141;
+    color: #fff;
+    padding: 7px 12px 7px 7px;
+    position: relative;
+    &:hover {
+      bottom: 1px;
+      border: 2px solid #8acc6e;
+      color: #8acc6e;
+    }
+  }
+}

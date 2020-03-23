@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Lato Regular';
+	src: url('../fonts/lato_regular.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/lato_regular.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/lato_regular.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/lato_regular.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/lato_regular.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/lato_regular.svg#lato_regular') format('svg'); /* Chrome < 4, Legacy iOS */
+}
