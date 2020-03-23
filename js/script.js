@@ -302,9 +302,13 @@ right.onclick = function() {
       right.style.color = "black";
       break;
     case (right.style.color = "black"):
+      right.style.color = "brown";
+      break;
+    case (right.style.color = "brown"):
       right.style.color = "white";
       break;
   }
 };
 
 // item.classList.contains("f00"):
+brown;
