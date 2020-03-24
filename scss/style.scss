@@ -319,3 +319,22 @@ body {
   background-color: #8acc6e;
   font-weight: 700;
 }
+
+.main-switch {
+}
+.switch-body {
+  display: flex;
+  justify-content: center;
+  & a {
+  }
+}
+
+.span {
+  padding: 10px;
+  color: black;
+  font-size: 15px;
+  &:hover {
+    background-color: #8acc6e;
+    font-size: 18px;
+  }
+}

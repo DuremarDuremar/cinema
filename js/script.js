@@ -172,6 +172,30 @@ for (let item of filmName) {
         info.innerHTML =
           "<p style='font-size:18px; color:#fff'>1988</p> <p style = 'color:#8acc6e; font-weight:700;padding-top:5px'>Robert Bierman</p>";
         break;
+      case item.classList.contains("f13"):
+        info.innerHTML =
+          "<p style='font-size:18px; color:#fff'>2007</p> <p style = 'color:#8acc6e; font-weight:700;padding-top:5px'>Tony Gilroy</p>";
+        break;
+      case item.classList.contains("f14"):
+        info.innerHTML =
+          "<p style='font-size:18px; color:#fff'>2017</p> <p style = 'color:#8acc6e; font-weight:700;padding-top:5px'>Paul Thomas Anderson</p>";
+        break;
+      case item.classList.contains("f15"):
+        info.innerHTML =
+          "<p style='font-size:18px; color:#fff'>2003</p> <p style = 'color:#8acc6e; font-weight:700;padding-top:5px'>Bong Joon-ho</p>";
+        break;
+      case item.classList.contains("f16"):
+        info.innerHTML =
+          "<p style='font-size:18px; color:#fff'>1997</p> <p style = 'color:#8acc6e; font-weight:700;padding-top:5px'>Tsai Ming-liang</p>";
+        break;
+      case item.classList.contains("f17"):
+        info.innerHTML =
+          "<p style='font-size:18px; color:#fff'>1960</p> <p style = 'color:#8acc6e; font-weight:700;padding-top:5px'>Federico Fellini</p>";
+        break;
+      case item.classList.contains("f18"):
+        info.innerHTML =
+          "<p style='font-size:18px; color:#fff'>1950</p> <p style = 'color:#8acc6e; font-weight:700;padding-top:5px'>Billy Wilder</p>";
+        break;
       default:
         info.innerHTML = "";
     }

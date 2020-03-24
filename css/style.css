@@ -435,3 +435,23 @@ header {
   background-color: #8acc6e;
   font-weight: 700;
 }
+
+.switch-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.span {
+  padding: 10px;
+  color: black;
+  font-size: 15px;
+}
+
+.span:hover {
+  background-color: #8acc6e;
+  font-size: 18px;
+}
