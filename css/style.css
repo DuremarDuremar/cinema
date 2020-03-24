@@ -40,6 +40,17 @@ body {
           order: 1;
 }
 
+.window {
+  width: 100%;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.window .cc .film-img img {
+  height: 400px;
+}
+
 header {
   background-color: #ececec;
   background: url(/img/Det-sjunde-inseglet-1957.jpeg) no-repeat;
@@ -247,6 +258,7 @@ header {
   width: 70%;
   margin: 5px auto 0;
   display: block;
+  height: 200px;
 }
 
 .film-name {
@@ -420,8 +432,6 @@ header {
 
 .btnItem-onclick {
   border: 2px solid black;
-  background: linear-gradient(135deg, #0d1c21 13%, #1e3027 21%, rgba(82, 109, 57, 0.38) 45%, rgba(132, 167, 74, 0.15) 68%, rgba(180, 223, 91, 0.73) 90%, #b4df5b 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d1c21', endColorstr='#b4df5b',GradientType=1 );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d1c21', endColorstr='#b4df5b',GradientType=1 );
+  background-color: #8acc6e;
   font-weight: 700;
 }

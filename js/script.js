@@ -20,8 +20,8 @@ let tab3 = document.querySelectorAll("#tabs03 .film");
 let tab4 = document.querySelectorAll("#tabs04 .film");
 
 let newfilms = [tab2[03], tab2[08]];
-let popular = [tab3[00], tab3[04], tab3[05], tab3[06]];
-let stocks = [tab4[00], tab4[05], tab4[09]];
+let popular = [tab3[00], tab3[04], tab3[05], tab3[06], tab3[17], tab3[18]];
+let stocks = [tab4[00], tab4[05], tab4[09], tab4[13]];
 
 logo2.onclick = function() {
   for (let item of tab2) {
@@ -94,24 +94,24 @@ let modal = document.querySelector(".tabs-modal");
 
 let close = document.querySelector(".modal-close");
 
-// for (let item of filmName) {
-//   item.onclick = function() {
-//     modal.style.display = "flex";
-//     item2 = item.cloneNode(true);
-//     document.querySelector(".modal-content").appendChild(item2);
-//     item2.className = "window";
-//   };
-//   close.onclick = function() {
-//     modal.style.display = "none";
-//     document.querySelector(".modal-content").removeChild(item2);
-//   };
-//   window.onclick = function(event) {
-//     if (event.target == modal) {
-//       modal.style.display = "none";
-//       document.querySelector(".modal-content").removeChild(item2);
-//     }
-//   };
-// }
+for (let item of filmName) {
+  item.onclick = function() {
+    modal.style.display = "flex";
+    item2 = item.cloneNode(true);
+    document.querySelector(".modal-content").appendChild(item2);
+    item2.className = "window";
+  };
+  close.onclick = function() {
+    modal.style.display = "none";
+    document.querySelector(".modal-content").removeChild(item2);
+  };
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      document.querySelector(".modal-content").removeChild(item2);
+    }
+  };
+}
 
 //////////////////////////////////РАЗДЕЛ ИНФО В КАРТОЧКАХ/////////////////////////////////////////////////////
 
@@ -214,10 +214,10 @@ btnItem04.onclick = function() {
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
-let slaiderAll = document.querySelector(".window .c00");
+// let slaiderAll = document.querySelector(".window .c00");
 
-let right = document.querySelector(".modal-right");
-console.log(right);
+// let right = document.querySelector(".modal-right");
+// console.log(right);
 
 // for (let item of filmName) {
 //   item.onclick = function() {
@@ -237,78 +237,77 @@ console.log(right);
 //     }
 //   };
 //
-let windows = document.querySelector(".window .c00");
-console.log(windows);
+// let windows = document.querySelector(".window .c00");
+// console.log(windows);
 
 // windows.onclick = function() {
 //   this.style.display = "none";
 // };
 
-let close2 = document.querySelector(".modal-close p");
-console.log(close2);
+// let close2 = document.querySelector(".modal-close p");
+// console.log(close2);
 
-for (let item of filmName) {
-  item.onclick = function itemOn() {
-    modal.style.display = "flex";
-    item2 = item.cloneNode(true);
-    document.querySelector(".modal-content").appendChild(item2);
-    item2.className = "window";
-  };
-  close.onclick = function() {
-    modal.style.display = "none";
-    document.querySelector(".modal-content").removeChild(item2);
-  };
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-      document.querySelector(".modal-content").removeChild(item2);
-    }
-  };
-}
+// for (let item of filmName) {
+//   item.onclick = function itemOn() {
+//     modal.style.display = "flex";
+//     item2 = item.cloneNode(true);
+//     document.querySelector(".modal-content").appendChild(item2);
+//     item2.className = "window";
+//   };
+//   close.onclick = function() {
+//     modal.style.display = "none";
+//     document.querySelector(".modal-content").removeChild(item2);
+//   };
+//   window.onclick = function(event) {
+//     if (event.target == modal) {
+//       modal.style.display = "none";
+//       document.querySelector(".modal-content").removeChild(item2);
+//     }
+//   };
+// }
 
-for (let item of filmName) {
-  item3 = item.cloneNode(true);
-  right.onmousedown = function() {
-    document.querySelector(".modal-content").removeChild(item2);
-  };
+// for (let item of filmName) {
+//   item3 = item.cloneNode(true);
+//   right.onmousedown = function() {
+//     document.querySelector(".modal-content").removeChild(item2);
+//   };
 
-  right.onmouseup = function() {
-    document.querySelector(".modal-content").appendChild(item3);
-    modal.style.display = "flex";
-    item3.className = "window";
-  };
-  close2.onclick = function() {
-    modal.style.display = "none";
-    right.style.color = "white";
-    document.querySelector(".modal-content").removeChild(item3);
-  };
-}
+//   right.onmouseup = function() {
+//     document.querySelector(".modal-content").appendChild(item3);
+//     modal.style.display = "flex";
+//     item3.className = "window";
+//   };
+//   close2.onclick = function() {
+//     modal.style.display = "none";
+//     right.style.color = "white";
+//     document.querySelector(".modal-content").removeChild(item3);
+//   };
+// }
 
-right.onclick = function() {
-  switch (right.style.color) {
-    case (right.style.color = "white"):
-      right.style.color = "red";
-      break;
-    case (right.style.color = "red"):
-      right.style.color = "green";
-      break;
-    case (right.style.color = "green"):
-      right.style.color = "yellow";
-      break;
-    case (right.style.color = "yellow"):
-      right.style.color = "blue";
-      break;
-    case (right.style.color = "blue"):
-      right.style.color = "black";
-      break;
-    case (right.style.color = "black"):
-      right.style.color = "brown";
-      break;
-    case (right.style.color = "brown"):
-      right.style.color = "white";
-      break;
-  }
-};
+// right.onclick = function() {
+//   switch (right.style.color) {
+//     case (right.style.color = "white"):
+//       right.style.color = "red";
+//       break;
+//     case (right.style.color = "red"):
+//       right.style.color = "green";
+//       break;
+//     case (right.style.color = "green"):
+//       right.style.color = "yellow";
+//       break;
+//     case (right.style.color = "yellow"):
+//       right.style.color = "blue";
+//       break;
+//     case (right.style.color = "blue"):
+//       right.style.color = "black";
+//       break;
+//     case (right.style.color = "black"):
+//       right.style.color = "brown";
+//       break;
+//     case (right.style.color = "brown"):
+//       right.style.color = "white";
+//       break;
+//   }
+// };
 
 // item.classList.contains("f00"):
-brown;

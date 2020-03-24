@@ -63,6 +63,14 @@ body {
   order: 1;
 }
 
+.window {
+  width: 100%;
+  order: 1;
+}
+.window .cc .film-img img {
+  height: 400px;
+}
+
 //_______________________________________________________________________________________
 
 @import "_header";
@@ -133,6 +141,7 @@ body {
     width: 70%;
     margin: 5px auto 0;
     display: block;
+    height: 200px;
     // background-size: cover;
     // max-width: 100%;
   }
@@ -307,34 +316,6 @@ body {
 
 .btnItem-onclick {
   border: 2px solid black;
-  background: -moz-linear-gradient(
-    -45deg,
-    rgba(13, 28, 33, 1) 13%,
-    rgba(30, 48, 39, 1) 21%,
-    rgba(82, 109, 57, 0.38) 45%,
-    rgba(132, 167, 74, 0.15) 68%,
-    rgba(180, 223, 91, 0.73) 90%,
-    rgba(180, 223, 91, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    -45deg,
-    rgba(13, 28, 33, 1) 13%,
-    rgba(30, 48, 39, 1) 21%,
-    rgba(82, 109, 57, 0.38) 45%,
-    rgba(132, 167, 74, 0.15) 68%,
-    rgba(180, 223, 91, 0.73) 90%,
-    rgba(180, 223, 91, 1) 100%
-  );
-  background: linear-gradient(
-    135deg,
-    rgba(13, 28, 33, 1) 13%,
-    rgba(30, 48, 39, 1) 21%,
-    rgba(82, 109, 57, 0.38) 45%,
-    rgba(132, 167, 74, 0.15) 68%,
-    rgba(180, 223, 91, 0.73) 90%,
-    rgba(180, 223, 91, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d1c21', endColorstr='#b4df5b',GradientType=1 );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d1c21', endColorstr='#b4df5b',GradientType=1 );
+  background-color: #8acc6e;
   font-weight: 700;
 }
