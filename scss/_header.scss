@@ -65,11 +65,15 @@ header {
   }
   & form button {
     margin-left: 10px;
-    background: url(/img/header-sear.png) left no-repeat;
+    // background: url(/img/header-sear.png) left no-repeat;
     font-size: 23px;
-    padding: 10px 10px 10px 30px;
+    padding: 10px 10px 10px 5px;
     background-color: #8acc6e;
     color: #fff;
+    &:hover {
+      border: 2px solid red;
+      color: red;
+    }
   }
 }
 

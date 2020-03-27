@@ -114,6 +114,7 @@ body {
   }
 }
 .film {
+  // display: none;
   border: 1px solid gray;
   width: 25%;
   height: 280px;
@@ -320,21 +321,14 @@ body {
   font-weight: 700;
 }
 
-.main-switch {
+.paginator {
+  line-height: 150%;
 }
-.switch-body {
-  display: flex;
-  justify-content: center;
-  & a {
-  }
+.paginator > span {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
 }
-
-.span {
-  padding: 10px;
-  color: black;
-  font-size: 15px;
-  &:hover {
-    background-color: #8acc6e;
-    font-size: 18px;
-  }
+.paginator_active {
+  color: red;
 }

@@ -146,11 +146,15 @@ header {
 
 .header-input form button {
   margin-left: 10px;
-  background: url(/img/header-sear.png) left no-repeat;
   font-size: 23px;
-  padding: 10px 10px 10px 30px;
+  padding: 10px 10px 10px 5px;
   background-color: #8acc6e;
   color: #fff;
+}
+
+.header-input form button:hover {
+  border: 2px solid red;
+  color: red;
 }
 
 .header-cart-cart button {
@@ -436,22 +440,16 @@ header {
   font-weight: 700;
 }
 
-.switch-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.paginator {
+  line-height: 150%;
 }
 
-.span {
-  padding: 10px;
-  color: black;
-  font-size: 15px;
+.paginator > span {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
-.span:hover {
-  background-color: #8acc6e;
-  font-size: 18px;
+.paginator_active {
+  color: red;
 }

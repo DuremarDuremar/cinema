@@ -64,26 +64,39 @@ for (let item of costStocks) {
 
 ////////////////ПОИСК ПО САЙТУ/////////////////////////////////////////////////////////
 
+let seaFilm;
+
 let seaInp = document.querySelector(".search-input");
 
 let seaBtn = document.querySelector(".search-button");
 
 seaInp.oninput = function() {
-  let seaFilm = this.value.trim().toUpperCase();
+  seaFilm = this.value.trim().toUpperCase();
   let film = document.querySelectorAll("#tabs01 .film");
   if (seaFilm != " ") {
     film.forEach(function(elem) {
       if (elem.innerText.toUpperCase().search(seaFilm) == -1) {
         elem.classList.add("hide");
+        // elem.style.opacity = "0.1";
+        elem.style.display = "none";
       } else {
         elem.classList.remove("hide");
+        // elem.style.opacity = "1";
+        elem.style.display = "flex";
       }
     });
   } else {
     film.forEach(function(elem) {
       elem.classList.remove("hide");
+      // elem.style.opacity = "1";
+      elem.style.display = "flex";
     });
   }
+};
+
+seaBtn.onclick = function() {
+  document.querySelector(".paginator_active").click();
+  seaInp.value = " ";
 };
 
 //////////////////////////СОЗДАНИЕ КАРТОЧЕК////////////////////////////////////////////////////////
@@ -238,100 +251,68 @@ btnItem04.onclick = function() {
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
-// let slaiderAll = document.querySelector(".window .c00");
+////////////////////////ПАГИНАЦИЯ///////////////////////////////////////////////////////
 
-// let right = document.querySelector(".modal-right");
-// console.log(right);
+var count = 19; //всего записей
+var cnt = 16; //сколько отображаем сначала
+var cnt_page = Math.ceil(count / cnt); //кол-во страниц
 
-// for (let item of filmName) {
-//   item.onclick = function() {
-//     modal.style.display = "flex";
-//     item2 = item.cloneNode(true);
-//     document.querySelector(".modal-content").appendChild(item2);
-//     item2.className = "window";
-//   };
-//   close.onclick = function() {
-//     modal.style.display = "none";
-//     document.querySelector(".modal-content").removeChild(item2);
-//   };
-//   window.onclick = function(event) {
-//     if (event.target == modal) {
-//       modal.style.display = "none";
-//       document.querySelector(".modal-content").removeChild(item2);
-//     }
-//   };
-//
-// let windows = document.querySelector(".window .c00");
-// console.log(windows);
+//выводим список страниц
+var paginator = document.querySelector(".paginator");
+var page = "";
+for (var i = 0; i < cnt_page; i++) {
+  page +=
+    "<span data-page=" +
+    i * cnt +
+    '  id="page' +
+    (i + 1) +
+    '">' +
+    (i + 1) +
+    "</span>";
+}
+paginator.innerHTML = page;
 
-// windows.onclick = function() {
-//   this.style.display = "none";
-// };
+// выводим первые записи {cnt}
+let div_num = document.querySelectorAll("#tabs01 .film");
 
-// let close2 = document.querySelector(".modal-close p");
-// console.log(close2);
+for (var i = 0; i < div_num.length; i++) {
+  if (i < cnt) {
+    div_num[i].style.display = "flex";
+  }
+}
 
-// for (let item of filmName) {
-//   item.onclick = function itemOn() {
-//     modal.style.display = "flex";
-//     item2 = item.cloneNode(true);
-//     document.querySelector(".modal-content").appendChild(item2);
-//     item2.className = "window";
-//   };
-//   close.onclick = function() {
-//     modal.style.display = "none";
-//     document.querySelector(".modal-content").removeChild(item2);
-//   };
-//   window.onclick = function(event) {
-//     if (event.target == modal) {
-//       modal.style.display = "none";
-//       document.querySelector(".modal-content").removeChild(item2);
-//     }
-//   };
-// }
+var main_page = document.getElementById("page1");
+main_page.classList.add("paginator_active");
 
-// for (let item of filmName) {
-//   item3 = item.cloneNode(true);
-//   right.onmousedown = function() {
-//     document.querySelector(".modal-content").removeChild(item2);
-//   };
+//листаем
+function pagination(event) {
+  var e = event || window.event;
+  var target = e.target;
+  var id = target.id;
 
-//   right.onmouseup = function() {
-//     document.querySelector(".modal-content").appendChild(item3);
-//     modal.style.display = "flex";
-//     item3.className = "window";
-//   };
-//   close2.onclick = function() {
-//     modal.style.display = "none";
-//     right.style.color = "white";
-//     document.querySelector(".modal-content").removeChild(item3);
-//   };
-// }
+  if (target.tagName.toLowerCase() != "span") return;
 
-// right.onclick = function() {
-//   switch (right.style.color) {
-//     case (right.style.color = "white"):
-//       right.style.color = "red";
-//       break;
-//     case (right.style.color = "red"):
-//       right.style.color = "green";
-//       break;
-//     case (right.style.color = "green"):
-//       right.style.color = "yellow";
-//       break;
-//     case (right.style.color = "yellow"):
-//       right.style.color = "blue";
-//       break;
-//     case (right.style.color = "blue"):
-//       right.style.color = "black";
-//       break;
-//     case (right.style.color = "black"):
-//       right.style.color = "brown";
-//       break;
-//     case (right.style.color = "brown"):
-//       right.style.color = "white";
-//       break;
-//   }
-// };
+  var num_ = id.substr(4);
+  var data_page = +target.dataset.page;
+  main_page.classList.remove("paginator_active");
+  main_page = document.getElementById(id);
+  main_page.classList.add("paginator_active");
 
-// item.classList.contains("f00"):
+  var j = 0;
+  for (var i = 0; i < div_num.length; i++) {
+    var data_num = div_num[i].dataset.num;
+    if (data_num <= data_page || data_num >= data_page)
+      div_num[i].style.display = "none";
+  }
+  for (var i = data_page; i < div_num.length; i++) {
+    if (j >= cnt) break;
+    div_num[i].style.display = "flex";
+    j++;
+  }
+}
+
+window.onload = function() {
+  document.querySelector(".paginator_active").click();
+  document.querySelector(".active").click();
+};
+///////////////////////////////////////////////////////////////////////////////////////////////
