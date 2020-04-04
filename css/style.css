@@ -141,7 +141,11 @@ header {
 }
 
 .header-input form input {
-  font-size: 23px;
+  font-size: 26px;
+  background: url(/img/header-sear.png) 5px 3px no-repeat;
+  padding-left: 30px;
+  color: #fff;
+  border: 1px solid #fff;
 }
 
 .header-input form button {
@@ -153,8 +157,7 @@ header {
 }
 
 .header-input form button:hover {
-  border: 2px solid red;
-  color: red;
+  border: 2px solid #fff;
 }
 
 .header-cart-cart button {

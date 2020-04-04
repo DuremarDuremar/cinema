@@ -64,15 +64,16 @@ for (let item of costStocks) {
 
 ////////////////ПОИСК ПО САЙТУ/////////////////////////////////////////////////////////
 
-let seaFilm;
+// let seaFilm;
 
 let seaInp = document.querySelector(".search-input");
 
 let seaBtn = document.querySelector(".search-button");
 
+let film = document.querySelectorAll("#tabs01 .film");
+
 seaInp.oninput = function() {
-  seaFilm = this.value.trim().toUpperCase();
-  let film = document.querySelectorAll("#tabs01 .film");
+  let seaFilm = this.value.trim().toUpperCase();
   if (seaFilm != " ") {
     film.forEach(function(elem) {
       if (elem.innerText.toUpperCase().search(seaFilm) == -1) {
@@ -316,3 +317,10 @@ window.onload = function() {
   document.querySelector(".active").click();
 };
 ///////////////////////////////////////////////////////////////////////////////////////////////
+
+let film4 = document.querySelectorAll("#tabs01");
+
+// let filmRandom = film.sort(function() {
+//   return Math.random() - 0.5;
+// });
+console.log(film);

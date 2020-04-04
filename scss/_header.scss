@@ -61,7 +61,11 @@ header {
     background-color: #8acc6e;
   }
   & form input {
-    font-size: 23px;
+    font-size: 26px;
+    background: url(/img/header-sear.png) 5px 3px no-repeat;
+    padding-left: 30px;
+    color: #fff;
+    border: 1px solid #fff;
   }
   & form button {
     margin-left: 10px;
@@ -71,8 +75,7 @@ header {
     background-color: #8acc6e;
     color: #fff;
     &:hover {
-      border: 2px solid red;
-      color: red;
+      border: 2px solid #fff;
     }
   }
 }
